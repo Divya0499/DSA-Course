@@ -6,9 +6,14 @@ int main(){
 int n;
 cin>>n;
 
-for(int i = 1; i <= n; i++){
-  for(int j = 1 ; j <= i; j++){
-
+for(int i = 1; i <= n; i++){    
+  
+  //also we can do by int count = i;
+  
+ for(int j = 1 ; j <= i; j++){
+  
+    //cout<<count<<"";
+     //count++;   
     cout<< i+j-1<<" ";
   }
   cout<<endl;
