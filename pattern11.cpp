@@ -14,9 +14,21 @@ for(int i = 1; i <= n; i++ ){
   }
   cout<<endl;
 }
+  
+//   Another approach
+  
+for(int i = 1; i <= n; i++ ){
+      char ch = 'A'+i-1;
+  for(int j = 1; j <= n; j++){
+
+    cout<< ch <<" ";
+
+    ch++;
+  }
+  
  
  // A B C
  // B C D
- // D E F
+ // C D E
   return 0;
 }
