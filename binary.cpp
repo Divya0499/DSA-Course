@@ -1,22 +1,34 @@
 #include<iostream>
-#include<math.h>
 using namespace std;
 
-int main(){
-int n;
-cin>>n;
-int ans = 0;
-int i = 0;
-while( n != 0){
-  int bit = n & 1;
-  ans = (bit*pow(10,i))+ans;
-  n = n>>1;
-  i++;
 
+int binary(int* arr, int n, int key){
+  int s=0;
+  int e=n-1;
+
+  int mid = s+(e-s)/2;
+
+  while(s <= e){
+    if(arr[mid]==key){
+      return mid;
+      e--;
+      s++;
+    }else if(arr[mid]>key){
+      e = mid-1;
+    }else{
+      s = mid+1;
+    }
+    mid = s+(e-s)/2;
+  }
+  return 0;
 }
-cout<<ans;
 
+ int main() {
+int n = 5;
+int arr[]={1,3,4,9,10};
+int key = 4;
 
+cout<< binary(arr,n,key);
 
   return 0;
 }
